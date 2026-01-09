@@ -1,43 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Local Pet Adoption Service</title>
-</head>
+    <head>
+    <title>Local Pet Adoption Service</title>
+    </head>
 
-<body>
-  <h1>Local Pet Adoption Service</h1>
-  <p>Welcome! This website shares some info about a local pet adoption service.
-    You can see adoption steps.
-  </p>
+    <body>
+        <div id="Container">
 
-  <p>
-    <a href="index.html">Home</a>
-  </p>
-  <p>
-    <a href="adopt.html">Available Pets</a>
-  </p>
+            <header>Local Pet Adoption Service</header>
 
-  <h2>Adoption Steps</h2>
-  <ol>
-    <li>Browse pets and choose one</li>
-    <li>Fill out an adoption form</li>
-    <li>Meet the pet</li>
-    <li>Bring your new pet home</li>
-  </ol>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adopt.html">Available Pets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-  <h2>Why Adopt?</h2>
-  <ul>
-    <li>You give a pet a second chance</li>
-    <li>You support your local community</li>
-    <li>Many pets are already vaccinated and checked</li>
-  </ul>
+            <img src="images/adopt me.jpg" alt="adopt me" width="500">
 
-  <p>
-    Learn more (research source) :
-    <a>Wikipedia: Animal shelter</a>
-  </p>
+            <main>
+                <h1>Contact Us</h1>
+                <p>
+                    If you are interested in adopting a pet or have quetions,
+                    Please contact us using the form below.
+                </p>
 
-  <img src="images/ChooseAShelterDog-1.jpg" alt="ChooseDog" width="500">
+                <h2>Phone:</h2>
+                <p>(800)000-0000</p>
 
-</body>
+                <h2>Email:</h2>
+                <p>info@AdoptPet.com</p>
+
+                <h2>Contact Form</h2>
+
+                <form action="/contact" method="post">
+                <fieldset>
+                    <legend>Enter your information</legend>
+                    <label>Enter your full name</label><br>
+                    <input type="text" name="name"><br>
+                    <label>Enter your email</label><br>
+                    <input type="email" name="email"><br>
+                    <label>Enter your phone</label><br>
+                    <input type="text" name="phone"><br>
+                    <br><label>How should we contact you?</label><br>
+                    <input type="radio" name="contact" value="Email"/>Email
+                    <input type="radio" name="contact" value="Phone"/>Phone <br/>
+                    <br><label>What type of pet are you looking for?</label><br>
+                    <select>
+                        <option>Dog</option>
+                        <option>Cat</option>
+                        <option>Other</option>
+                    </select><br>
+                    <br>Describe a reason why you are interested to adopt:<br>
+                    <textarea rows="5" cols="30"></textarea><br>
+                    <input type="submit" value="Inquire">
+                </fieldset>
+                </form>
+            </main>
+
+  
+            <img src="images/ChooseAShelterDog-1.jpg" alt="ChooseDog" width="500">
+
+        </div>
+    </body>
 </html>
