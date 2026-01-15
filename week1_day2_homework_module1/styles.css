@@ -120,6 +120,80 @@
                 font-weight: bold;
                 background: #bde1ff;
             }
+
+            /* Contact */
+            #contact main h1 {
+                text-align: left;
+                text-transform: none;
+                color: #9ed034;
+                margin: 30px 0 10px 0;
+            }
+            #contact main p {
+                width: 70%;
+                margin: 0 0 12px 0;
+                font-size: 0.95em;
+                line-height: 1.4em;
+            }
+            
+            #contact .contactinfo {
+                width: 70%;
+                margin: 0 0 10px 0;
+            }
+            #contact .contactinfo span:first-child {
+                font-weight: bold;
+                display: inline-block;
+                width: 60px;
+            }
+            #contact form {
+                width: 70%;
+                margin: 10px 0 30px 0;
+            }
+            #contact fieldset {
+                border: 2px solid #9ed034;
+                padding: 20px 30px 30px 30px;
+            }
+            #contact legend {
+                color: #4977d1;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 0 10px;
+            }
+            #contact label {
+                display: block;
+                font-weight: bold;
+                margin: 10px 0 6px 0;
+            }
+            #contact input[type="text"],
+            #contact input[type="email"],
+            #contact select,
+            #contact textarea {
+                display: block;
+                width: 100%;
+                padding: 6px;
+                border: 1px solid #ccc;
+            }
+            #contact textarea{
+                height: 120px;
+                resize: none;
+            }
+            #contact .radios {
+                margin-top: 10px;
+            }
+            #contact .radios input[type="radio"] {
+                margin-left: 6px;
+                margin-right: 4px;
+            }
+            #contact .button {
+                text-align: right;
+                margin-top: 15px;
+            }
+            #contact .button input[type="submit"] {
+                background-color: #4977d1;
+                color: #fff;
+                border: none;
+                padding: 8px 18px;
+                cursor: pointer;
+            }
             /* Partners */
             section {
                 width: 100%;
