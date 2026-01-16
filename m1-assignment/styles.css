@@ -1,0 +1,83 @@
+
+
+#home header {
+                background: no-repeat lightgrey url(images/pets_adopt\ me.jpg);
+                background-size: 1500px;
+            }
+header {
+    text-align: center;
+    position: relative;
+}
+header h1 {
+    text-align: center;
+    font-size: 65px;
+    margin: 0;
+    z-index: 2;
+    top: 60%;
+    bottom: 25px;
+    right: 0;
+    left: 0;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.main-img {
+    width: 100%;
+    transform: rotate(-90deg);
+    display: block;
+}
+
+#Container {
+    width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Nav */
+nav ul {
+    list-style: none;
+    padding: 50px;
+    margin: 0 0 50px 50px;
+    background-color: lightgrey;
+    text-align: center;
+}
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: green;
+}
+
+main h1, main h2 {
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+main img {
+    max-width: 1000px;
+    display: block;
+    margin: 20px auto;
+}
