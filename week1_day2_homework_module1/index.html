@@ -99,6 +99,13 @@
                 var sec = d.getSeconds();
                 var ampm;
 
+                var utchr = d.getUTCHours();
+                var timeDiff;
+                var adjTimeDiff;
+                var timeZone;
+
+                timeDiff = utchr - hr;
+
                 if (sec < 10) {
                     sec = "0" + sec;
                 }
@@ -113,10 +120,27 @@
                 } else {
                     ampm = "AM";
                 }
-                var time = hr + ":" + min + ":" + sec + " " +ampm;
+
+                if (timeDiff < 0) {
+                    adjTimeDiff = timeDiff + 24;
+                } else {
+                    adjTimeDiff = timeDiff;
+                }
+                if (adjTimeDiff >= 7 && adjTimeDiff <= 9) {
+                    timeZone = "PT";
+                } else if (adjTimeDiff >= 5 && adjTimeDiff <= 6) {
+                    timeZone = "MT";
+                } else if (adjTimeDiff >= 4 && adjTimeDiff <=5) {
+                    timeZone = "CT";
+                } else {
+                    timeZone = "ET";
+                }
+
+                var time = hr + ":" + min + ":" + sec + " " + ampm + timeZone;
                 document.getElementById("clock").innerText = time;
-                setInterval(currentTime, 1000)
             }
+
+            setInterval(currentTime, 1000)
             currentTime();
         </script>
 
