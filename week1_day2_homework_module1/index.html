@@ -32,6 +32,10 @@
             </nav> <!-- End of navigation -->
             </div>
             </header>
+            <section id="timeofday">
+                <span>Your Current Local Time: </span>
+                <span id="clock"></span>
+            </section>
 
 
             <!-- Main content -->
@@ -86,6 +90,22 @@
 
         </footer>
         </div> <!-- End Container -->
-         
+        
+        <script>
+            function currentTime() {
+                var d = new Date();
+                var hr = d.getHours();
+                var min = d.getMinutes();
+                var ampm;
+
+                if (sec < 10) {
+                    sec = "0" + sec;
+                }
+                if (min < 10) {
+                    min = "0" + min;
+                }
+            }
+        </script>
+
     </body>
 </html>
