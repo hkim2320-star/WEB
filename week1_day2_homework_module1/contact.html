@@ -93,24 +93,24 @@ the Cliffs, Hours of Operations, Facilities or questions about this site using o
 
                 <section>
         <ul id="partners">
-            <li class="partner">
-                <img src="images/partner-bustour.png" alt="Partner Bus Tours">
+            <!--<li class="partner">
+                <img src="images/partner-1.png" alt="Partner Bus Tours">
             </li>
             <li class="partner">
-                <img src="images/partner-cabinrental.png" alt="Partner Cabin Rental">
+                <img src="images/partner-2l.png" alt="Partner Cabin Rental">
             </li>
             <li class="partner">
-                <img src="images/partner-campingadv.png" alt="Partner Camping Adventure">
+                <img src="images/partner-3.png" alt="Partner Camping Adventure">
             </li>
             <li class="partner">
-                <img src="images/partner-collegetours.png" alt="Partner College Tours">
+                <img src="images/partner-4.png" alt="Partner College Tours">
             </li>
             <li class="partner">
-                <img src="images/partner-rentalbike.png" alt="Partner Bike Rentals">
+                <img src="images/partner-5.png" alt="Partner Bike Rentals">
             </li>
             <li class="partner">
-                <img src="images/partner-tourgroup.png" alt="Partner Tour Group">
-            </li>
+                <img src="images/partner-6.png" alt="Partner Tour Group">
+            </li>-->
         </ul>
         </section>
 
@@ -135,6 +135,25 @@ the Cliffs, Hours of Operations, Facilities or questions about this site using o
         </footer>
 
          </div> <!-- End Container -->
+
+        <script>
+                var photos = [];
+                var fileNames = [];
+                var image;
+                var openList = '<li class="partner">';
+                var closeList = '</li>';
+
+                for (var i = 1; i < 7; i++) {
+                    fileNames.push("partner-" + i + ".png");
+                }
+
+                for (var i =0; i < fileNames.length; i++) {
+                    image = '<img src="images/' + fileNames[i] + '">';
+                    photos.push(openList + image + closeList);
+                }
+
+                document.getElementById("partners").innerHTML = photos.join(" ");
+        </script>
          
     </body>
 </html>
