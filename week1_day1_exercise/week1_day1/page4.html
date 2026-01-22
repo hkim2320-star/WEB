@@ -56,11 +56,13 @@
             var openList = "<li id='photo'>";
             var closeList = "</li>";
 
-            for (var i=0; i<6; i++) {
-                fileNames.push("winterland"+(i+1));
-                photos.push("<img src='images_week3/" + fileNames [i] + ".jpg' >");
-                image = openList + photos[i] + closeList;
-                imageList.push(image);
+            for (var i=1; i<7; i++) {
+                //fileNames.push("winterland"+(i+1));
+                //photos.push("<img src='images_week3/" + fileNames [i] + ".jpg' >");
+                //image = openList + photos[i] + closeList;
+                //imageList.push(image);
+
+                imageList.push('<li id="photo"><img src="images_week3/winterland' + i + '.jpg"></li>');
             }
 
             document.getElementById("album").innerHTML = imageList.join(" ");
