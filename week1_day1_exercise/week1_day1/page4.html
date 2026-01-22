@@ -7,13 +7,12 @@
 
     </head>
     <body>
-        <!-- Container to wrap everything -->
+
         <div id="Container">
 
-            <!-- Brand of website -->
+
             <header> My Web Site Brand </header>
 
-            <!-- Main Navigation -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -27,7 +26,7 @@
                     <li>View</li>
                     <li>Help</li>
                 </ol>
-            </nav> <!-- End of navigation -->
+            </nav> 
 
             <!-- Main content -->
             <main>
@@ -35,18 +34,37 @@
                 <p>MY Fourth paragraph. </p>
 
                 <ul id="album">
+                    <!--
                     <li id="photo"><img src="images_week3/winterland1.jpg"></li>
                     <li id="photo"><img src="images_week3/winterland2.jpg"></li>
                     <li id="photo"><img src="images_week3/winterland3.jpg"></li>
                     <li id="photo"><img src="images_week3/winterland4.jpg"></li>
                     <li id="photo"><img src="images_week3/winterland5.jpg"></li>
-                    <li id="photo"><img src="images_week3/winterland6.jpg"></li>
+                    <li id="photo"><img src="images_week3/winterland6.jpg"></li>-->
                 </ul>
-            </main> <!-- End of main centent -->
-            <!-- Footer Information -->
+            </main> 
+
             <footer>&copy; Copyright 2026</footer>
 
-         </div> <!-- End Container -->
+         </div> 
+
+         <script>
+            var photos = [];
+            var fileNames = [];
+            var imageList = [];
+            var image = [];
+            var openList = "<li id='photo'>";
+            var closeList = "</li>";
+
+            for (var i=0; i<6; i++) {
+                fileNames.push("winterland"+(i+1));
+                photos.push("<img src='images_week3/" + fileNames [i] + ".jpg' >");
+                image = openList + photos[i] + closeList;
+                imageList.push(image);
+            }
+
+            document.getElementById("album").innerHTML = imageList;
+         </script>
          
     </body>
 </html>
