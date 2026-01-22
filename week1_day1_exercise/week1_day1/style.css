@@ -80,6 +80,9 @@
         text-transform: capitalize;
         padding: 10px;
     }
+    main #album #photo img {
+        width: 400px;
+    }
     footer {
         height: 40px;
         background-color: rgb(129, 141, 179);
