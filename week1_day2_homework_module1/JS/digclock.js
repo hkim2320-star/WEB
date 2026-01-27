@@ -65,3 +65,9 @@
                 }
 
                 document.getElementById("partners").innerHTML = photos.join(" ");
+
+                function disableButton() {
+                    document.getElementById("submit").disabled = true;
+                }
+                disableButton();
+                
