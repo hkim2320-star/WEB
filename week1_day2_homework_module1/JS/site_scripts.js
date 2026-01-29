@@ -14,3 +14,5 @@
                 }
 
                 document.getElementById("partners").innerHTML = photos.join(" ");
+
+                
