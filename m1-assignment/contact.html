@@ -52,6 +52,19 @@
                     <label>Enter your phone</label><br>
                     <input type="text" name="phone"><br>
                     <br><label>How should we contact you?</label><br>
+                    <select id="contactMethod">
+                        <option value="">Select One</option>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                    </select>
+                    <div id="emailBox">
+                        <label for="emailInput">Enter your email</label>
+                        <input type="email" id="emailInput">
+                    </div>
+                    <div id="phoneBox">
+                        <label for="phoneInput">Enter your phone</label>
+                        <input type="text" id="phoneInput">
+                    </div>
                     <input type="radio" name="contact" value="Email"/>Email
                     <input type="radio" name="contact" value="Phone"/>Phone <br/>
                     <br><label>What type of pet are you looking for?</label><br>
@@ -71,5 +84,6 @@
             <img class="bottom-img" src="images/ChooseAShelterDog-1.jpg" alt="ChooseDog">
 
         </div>
+        
     </body>
 </html>

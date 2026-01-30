@@ -202,6 +202,9 @@ tbody td {
     border: 1px solid #ccc;
     margin-top: 6px;
 }
+#emailBox, #phoneBox {
+    display: none;
+}
 #contact textarea {
     height: 140px;
 }
