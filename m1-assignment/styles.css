@@ -119,6 +119,9 @@ main #album #photo {
     position: relative;
     cursor: pointer;
 }
+main #album #photo:hover img {
+    opacity: 0.5;
+}
 main #album {
     list-style: none;
     padding: 0;
@@ -226,4 +229,48 @@ footer {
     margin-top: 30px;
     padding: 15px 0;
     border-top: 1px solid #ddd;
+}
+
+
+/* Gallery Info Box */
+
+#infoBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    height: 300px;
+    max-width: 80%;
+    padding: 25px;
+
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    border-radius: 30px;
+    visibility: hidden;
+    z-index: 9999;
+}
+
+#infoBox h2 {
+    margin: 0 0 12px 0;
+    text-align: center;
+}
+
+#infoBox p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: large;
+}
+
+#infoBox a {
+    display: block;
+    margin-top: 18px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #9ed034;
+}
+
+.description {
+    cursor: pointer;
 }
