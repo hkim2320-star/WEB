@@ -50,7 +50,11 @@
                     <li id="photo"><img src="images/pet_10.jpg"></li> -->
   </ul>
 
-
+  <div id="infoBox">
+    <h2 id="infoTitle"></h2>
+    <p id="infoText"></p>
+    <a href="#" id="infoClose">Click This To Close</a>
+  </div>
   
     </main>
 
@@ -58,37 +62,6 @@
     
 
   </div>
-  <script>
-    var photos = [];
-    var fileNames = [];
-    var imageList = [];
-    var image = [];
-    var openList = "<li id='photo'>";
-    var closeList = "</li>";
-
-    var captionTexts = [
-        "Milo", "Luna", "Mochi", "Ollie", "Leo", "Cleo", "Po","Bolt", "Nova", "Oreo"
-    ];
-    var openCaptionTag = '<p class= "caption">';
-    var closeCaptionTag = '</p>';
-
-    var descTexts = [
-        "2 years / Boy", "4 years / Boy", "1 years / Girl", "3 years / Girl", "2 years / Boy", "5 years / Girl", "2 years / Girl", "4 years / Boy", "6 years / Girl", "3 years / Boy"
-    ];
-    var openDescTag = "<p class='description'>";
-    var closeDescTag = "</p>"
-
-    for (var i=0; i<10; i++) {
-        fileNames.push("pet_"+(i+1));
-        photos.push("<img src='images/" + fileNames [i] + ".jpg' >");
-        image = openList + photos[i] + openCaptionTag + captionTexts[i] + closeCaptionTag + openDescTag + descTexts[i] + closeDescTag + closeList;
-        imageList.push(image);
-
-        }
-
-        document.getElementById("album").innerHTML = imageList.join(" ");
-
-    
-  </script>
+  <script src="JS/gallery.js"></script>
 </body>
 </html>
