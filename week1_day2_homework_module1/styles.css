@@ -140,6 +140,10 @@
                 font-weight: bold;
                 background: #bde1ff;
             }
+            .selected {
+                background-color: #a6d608;
+            }
+
 
             /* Cliffs */
             #cliffs main {
