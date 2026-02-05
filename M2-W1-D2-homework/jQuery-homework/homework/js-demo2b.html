@@ -9,7 +9,9 @@
 
 <script>
     $(document).ready(function() {
-       $("#btn").click(function(event){
+       $("#btn").click(function(){
+        console.log("clicked");
+
         $.getJSON("data.json", function(data) {
 
             $("caption").text(data.title);
@@ -28,19 +30,19 @@
             cal.eq(3).text(data.cal3);
             cal.eq(4).text(data.cal4);
 
-            let fatTds = $("#showfat td");
-            fatTds.eq(0).text(jqdata.fat[0]);
-            fatTds.eq(1).text(jqdata.fat[1]);
-            fatTds.eq(2).text(jqdata.fat[2]);
-            fatTds.eq(3).text(jqdata.fat[3]);
-            fatTds.eq(4).text(jqdata.fat[4]);
+            let fat = $("#showfat td");
+            fat.eq(0).text(data.subheadfat);
+            fat.eq(1).text(data.fat1);
+            fat.eq(2).text(data.fat2);
+            fat.eq(3).text(data.fat3);
+            fat.eq(4).text(data.fat4);
 
-            let venTds = $("#showven td");
-            venTds.eq(0).text(jqdata.vendor[0]);
-            venTds.eq(1).text(jqdata.vendor[1]);
-            venTds.eq(2).text(jqdata.vendor[2]);
-            venTds.eq(3).text(jqdata.vendor[3]);
-            venTds.eq(4).text(jqdata.vendor[4]);
+            let ven = $("#showven td");
+            ven.eq(0).text(data.subheadven);
+            ven.eq(1).text(data.ven1);
+            ven.eq(2).text(data.ven2);
+            ven.eq(3).text(data.ven3);
+            ven.eq(4).text(data.ven4);
         });
     
        });
@@ -66,7 +68,7 @@
   <p>My Second paragraph.</p>
 
   <table>
-    <!--<caption></caption>
+    <caption></caption>
     <thead>
         <tr id="showheading">
             <th></th>
@@ -100,7 +102,7 @@
             <td></td>
             <td></td>
         </tr>
-    </tfoot>-->
+    </tfoot>
     </table>
 
     <input type = "button" id = "btn" value = "Load Data" style="margin-top:20px;" />
