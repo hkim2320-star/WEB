@@ -10,9 +10,39 @@
 <script>
     $(document).ready(function() {
        $("#btn").click(function(event){
-        $.getJSON("data.json", function(jqdata)) {
-            console.log(jqdata);
-        }
+        $.getJSON("data.json", function(data) {
+
+            $("caption").text(data.title);
+
+            let ths = $("#showheading th");
+            ths.eq(0).text(data.heading);
+            ths.eq(1).text(data.head1);
+            ths.eq(2).text(data.head2);
+            ths.eq(3).text(data.head3);
+            ths.eq(4).text(data.head4);
+
+            let cal = $("#showcalories td");
+            cal.eq(0).text(data.subheadcal);
+            cal.eq(1).text(data.cal1);
+            cal.eq(2).text(data.cal2);
+            cal.eq(3).text(data.cal3);
+            cal.eq(4).text(data.cal4);
+
+            let fatTds = $("#showfat td");
+            fatTds.eq(0).text(jqdata.fat[0]);
+            fatTds.eq(1).text(jqdata.fat[1]);
+            fatTds.eq(2).text(jqdata.fat[2]);
+            fatTds.eq(3).text(jqdata.fat[3]);
+            fatTds.eq(4).text(jqdata.fat[4]);
+
+            let venTds = $("#showven td");
+            venTds.eq(0).text(jqdata.vendor[0]);
+            venTds.eq(1).text(jqdata.vendor[1]);
+            venTds.eq(2).text(jqdata.vendor[2]);
+            venTds.eq(3).text(jqdata.vendor[3]);
+            venTds.eq(4).text(jqdata.vendor[4]);
+        });
+    
        });
     });
  </script>
