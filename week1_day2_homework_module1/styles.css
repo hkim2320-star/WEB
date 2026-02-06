@@ -144,6 +144,30 @@
                 background-color: #a6d608;
             }
 
+            #activities main #displaySelected {
+                visibility: hidden;
+                width: 600px;
+                margin: 0 auto;
+                padding: 0.75em;
+                border: 2px solid #9ed934;
+            }
+            #activities main #displaySelected #result, #activities main #displaySelected #sendinfo {
+                display: inline-block;
+                margin: 0;
+            }
+            #activities main #result {
+                width: 300px;
+                padding: 0;
+                min-height: 50px;
+            }
+            #activities main #result {
+                margin-bottom: 1em;
+                font-size: 1.15em;
+            }
+            #activities main #displaySelected #sendinfo input {
+                width: 200px;
+            }
+
 
             /* Cliffs */
 
