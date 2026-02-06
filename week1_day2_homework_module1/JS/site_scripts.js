@@ -17,7 +17,7 @@
 
                 $(document).ready(function() {
 
-                $('.lightbox-toggle').click(function() {
+                $('.lightbox-toggle img').click(function() {
                     $('.backdrop').animate({'opacity':'.50'}, 300, 'linear').css('display', 'block');
                     $('.box').fadeIn();
 
@@ -28,7 +28,19 @@
                     var $altvalue = $(this).attr('alt');
 
                     if ($altvalue == "West Cliff") {
-                        var img = $('#photo:nth-child(1) img').clone();
+                        var img = $('.cliff-grid .cliff-card:nth-child(1) img').clone();
+                        $('.box').append(img);
+                        }
+                    if ($altvalue == "North Cliff") {
+                        var img = $('.cliff-grid .cliff-card:nth-child(2) img').clone();
+                        $('.box').append(img);
+                        }
+                    if ($altvalue == "East Cliff") {
+                        var img = $('.cliff-grid .cliff-card:nth-child(3) img').clone();
+                        $('.box').append(img);
+                        }
+                    if ($altvalue == "South Cliff") {
+                        var img = $('.cliff-grid .cliff-card:nth-child(4) img').clone();
                         $('.box').append(img);
                         }
                     });

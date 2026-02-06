@@ -146,6 +146,55 @@
 
 
             /* Cliffs */
+
+            .light box-toggle {
+                color: black;
+            }
+
+            .backdrop {
+                z-index: 1;
+                opacity: .0;
+                filter: alpha(opacity=0);
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                display: none;
+            }
+            .box {
+                z-index: 2;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                padding: 20px;
+                display: none;
+                opacity: 1;
+                width: auto;
+                height: auto;
+                border-radius: 5px;
+                -moz-box-shadow: 0 0 10px #444444;
+                -webkit-box-shadow: 0 0 10px #444444;
+                box-shadow: 0 0 10px #444444;
+            }
+            * {
+                z-index: 3;
+            }
+            .close {
+                float: right;
+                cursor: pointer;
+            }
+            #cliff-grid #cliff-card a img {
+                width: 400px;
+            }
+            .box img {
+                width: 100%;
+            }
+
+
             #cliffs main {
                 width: 900px;
                 margin: 0 auto;
