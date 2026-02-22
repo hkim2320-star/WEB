@@ -4,7 +4,7 @@
                 var openList = '<li class="partner">';
                 var closeList = '</li>';
 
-                for (var i = 1; i < 7; i++) {
+                /*for (var i = 1; i < 7; i++) {
                     fileNames.push("partner-" + i + ".png");
                 }
 
@@ -13,7 +13,7 @@
                     photos.push(openList + image + closeList);
                 }
 
-                document.getElementById("partners").innerHTML = photos.join(" ");
+                document.getElementById("partners").innerHTML = photos.join(" ");*/
 
                 $(document).ready(function() {
 
@@ -52,3 +52,5 @@
                         $('.box').fadeOut();
                     });
                 });
+
+                
