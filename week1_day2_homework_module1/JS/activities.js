@@ -39,3 +39,59 @@ $(document).ready(function () {
       }
   });
 });
+
+function renderSelectedInModal(selectedArr) {
+  if (selectedArr.length === 0) {
+    $("#selectedList").html("<p>No activities selected.</p>");
+    return;
+  }
+
+  let html = "<ul>";
+  selectedArr.forEach(function(item) {
+    html += "<li>" + item + "</li>";
+  });
+  html += "</ul>";
+
+  $("#selectedList").html(html);
+}
+
+function openSelectedModal(selectedArr) {
+  renderSelectedInModal(selectedArr);
+  $("#selectedModal").modal("show");
+}
+
+$(document).ready(function () {
+  function getSelectedItems() {
+    let selectedArr = [];
+
+    $("td.tdhighlight").each(function () {
+      let activity = $(this).text().trim();
+      let colIndex = $(this).index();
+      let siteName = $("table tr:first-child").children().eq(colIndex).text().trim();
+      selectedArr.push(activity + " at " + siteName);
+    });
+
+    return selectedArr;
+  }
+
+  function renderSelectedInModal(selectedArr) {
+    if (selectedArr.length === 0) {
+      $("#selectedList").html("<p>No activities selected.</p>");
+      return;
+    }
+
+    let html = "<ul>";
+    selectedArr.forEach(function (item) {
+      html += "<li>" + item + "</li>";
+    });
+    html += "</ul>";
+
+    $("#selectedList").html(html);
+  }
+
+  $("#openSelected").click(function () {
+    let selectedArr = getSelectedItems();
+    renderSelectedInModal(selectedArr);
+    $("#selectedModal").modal("show");
+  });
+});
