@@ -94,7 +94,7 @@
     <aside id="photos">
         <img :src="foodImage.src" :alt="foodImage.alt" :width="foodImage.width">
     </aside>
-    <h2>Comments</h2>
+    <h2>{{sectionTitle}}</h2>
     
     
     <section id="blogposts">
@@ -107,6 +107,7 @@
     <footer>
         &copy; Copyright FOOD BLOG
     </footer>
+    </div>
 
     <template id="post-template">
         <div class="post">
@@ -117,7 +118,7 @@
         </div>
     </template>
     
-</div>
+
 <script>
     Vue.component("post-item", {
         props: ['post'],
